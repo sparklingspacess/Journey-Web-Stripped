@@ -23,7 +23,11 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <https://unlicense.org>
 
-The file oculus.png is excluded from the license granted by this repository.
+The files excluded from the license granted by this repository are listed below.
+
+oculus.png
+oc_notif_toast.wav
+sfx_system_gesture.ogg
 
 The Oculus name, Oculus logo, and associated trademarks are trademarks of Meta Platforms, Inc. and its affiliated companies. The referenced image is not an original work of this project and no copyright or trademark rights in that image are granted under The Unlicense.
 
