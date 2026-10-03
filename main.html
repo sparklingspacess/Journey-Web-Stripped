@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head><title>Journey</title></head>
+<body style="background:#000;color:#FFF;font-family:monospace;font-size:12px;padding:0px;">
+<div id="out"></div>
+<div style="position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: 10px;">
+    <img src="oculus.png">
+    <button id="exploitButton">
+        Start Exploit
+    </button>
+</div>
+<script>
+const out = document.getElementById('out');
+const log = s => { out.innerHTML += s + '<br>'; console.log(s); };
+log('journey web vuln (oct 3rd 2026)');
+const button = document.getElementById('exploitButton');
+const passSound = new Audio('oc_notif_toast.wav');
+const failSound = new Audio('sfx_system_gesture.ogg');
+passSound.preload = 'auto';
+failSound.preload = 'auto';
+let fuckingAround = false;
+let fails = 0;
+button.addEventListener('click', () => {
+    if (fuckingAround)
+    {
+        return;
+    }
+    fuckingAround = true;
+    button.hidden = true;
+    alert('Press OK to start the exploit.\n\nYour headset may encounter issues during this.\nIf so, please reboot your headset and try again.\n\nThis exploit is designed for Quest 1 ONLY.\nThis will NOT work on newer headsets.');
+    log('starting exploit...');
+    let success = true; //The exploit would start here.
+    if (success)
+    {
+        passSound.currentTime = 0;
+        passSound.play();
+        log('exploit complete');
+    }
+    else
+    {
+        failSound.currentTime = 0;
+        failSound.play();
+        log('exploit failed, reboot and try again.');
+    }
+});
+</script>
+
+</body>
+</html>
